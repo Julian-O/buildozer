@@ -10,7 +10,7 @@ from unittest import mock
 
 from buildozer.targets.android import (
     TargetAndroid, DEFAULT_ANDROID_NDK_VERSION, MSG_P4A_RECOMMENDED_NDK_ERROR
-    )
+)
 
 
 class TestBuildozer(unittest.TestCase):
