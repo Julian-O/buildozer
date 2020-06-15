@@ -17,7 +17,7 @@ from os.path import exists, join, realpath, expanduser, basename, relpath
 from platform import architecture, uname
 import re
 from shutil import copyfile, rmtree
-from sys import platform, executable as sys_executable
+from sys import platform, executable
 import traceback
 
 from buildozer import BuildozerException, USE_COLOR
@@ -69,8 +69,8 @@ class TargetAndroid(Target):
             'app', 'android.arch', DEFAULT_ARCH)
         self._build_dir = join(
             self.buildozer.platform_dir, 'build-{}'.format(self._arch))
-        executable = sys_executable or 'python'
-        self._p4a_cmd = '{} -m pythonforandroid.toolchain '.format(executable)
+        _executable = executable or 'python'
+        self._p4a_cmd = '{} -m pythonforandroid.toolchain '.format(_executable)
         self._p4a_bootstrap = self.buildozer.config.getdefault(
             'app', 'p4a.bootstrap', 'sdl2')
         self.p4a_apk_cmd += self._p4a_bootstrap
