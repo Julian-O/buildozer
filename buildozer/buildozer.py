@@ -6,6 +6,8 @@ Generic Python packager for Android / iOS. Desktop later.
 
 '''
 
+__version__ = '1.2.0.dev0'
+
 import os
 import re
 import sys

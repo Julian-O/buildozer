@@ -51,7 +51,7 @@ with io.open(join(curdir, "CHANGELOG.md"), encoding="utf-8") as fd:
 
 setup(
     name='buildozer',
-    version=find_version('buildozer', '__init__.py'),
+    version=find_version('buildozer', 'buildozer.py'),
     description='Generic Python packager for Android / iOS and Desktop',
     long_description=readme + "\n\n" + changelog,
     long_description_content_type='text/markdown',
