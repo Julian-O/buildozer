@@ -34,7 +34,6 @@ except ImportError:
     print('Paramiko missing: pip install paramiko')
 
 
-
 class BuildozerRemote(Buildozer):
     def run_command(self, args):
         while args:

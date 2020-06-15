@@ -24,8 +24,6 @@ from buildozer.target import Target
 if sys.platform == 'win32':
     raise NotImplementedError('Windows platform not yet working for Android')
 
-
-
 WSL = 'Microsoft' in uname()[2]
 
 ANDROID_API = '27'
