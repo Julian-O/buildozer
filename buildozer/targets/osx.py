@@ -2,9 +2,9 @@
 OSX target, based on kivy-sdk-packager
 '''
 
-from os.path import exists, join, abspath, dirname
-from subprocess import check_call, check_output
 import sys
+from os.path import abspath, dirname, exists, join
+from subprocess import check_call, check_output
 
 from buildozer.target import Target
 

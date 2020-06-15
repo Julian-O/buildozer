@@ -1,3 +1,4 @@
-from os.path import join, dirname
 import sys
+from os.path import dirname, join
+
 sys.path.append(join(dirname(__file__), '_applibs'))

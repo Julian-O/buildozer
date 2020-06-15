@@ -6,7 +6,7 @@ This was needed to correctly support db between Python 2 and 3.
 __all__ = ["JsonStore"]
 
 import io
-from json import load, dump
+from json import dump, load
 from os.path import exists
 
 

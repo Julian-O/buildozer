@@ -2,27 +2,29 @@
 Android target, based on python-for-android project
 '''
 
+import ast
+import io
+import os
+import re
 import sys
+import traceback
+from distutils.version import LooseVersion
+from glob import glob
+from os import environ
+from os.path import basename, exists, expanduser, join, realpath, relpath
+from pipes import quote
+from platform import architecture, uname
+from shutil import copyfile, rmtree
+from sys import executable, platform
+
+from buildozer import USE_COLOR, BuildozerException
+from buildozer.libs.version import parse
+from buildozer.target import Target
+
 if sys.platform == 'win32':
     raise NotImplementedError('Windows platform not yet working for Android')
 
-import ast
-from distutils.version import LooseVersion
-import io
-from glob import glob
-from pipes import quote
-import os
-from os import environ
-from os.path import exists, join, realpath, expanduser, basename, relpath
-from platform import architecture, uname
-import re
-from shutil import copyfile, rmtree
-from sys import platform, executable
-import traceback
 
-from buildozer import BuildozerException, USE_COLOR
-from buildozer.target import Target
-from buildozer.libs.version import parse
 
 WSL = 'Microsoft' in uname()[2]
 

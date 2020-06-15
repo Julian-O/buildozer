@@ -1,6 +1,6 @@
-from sys import exit
 import os
 from os.path import join
+from sys import exit
 
 
 def no_config(f):

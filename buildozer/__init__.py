@@ -9,23 +9,24 @@ Generic Python packager for Android / iOS. Desktop later.
 __version__ = '1.2.0.dev0'
 
 import codecs
+import os
+import re
+import select
+import sys
+import textwrap
+import warnings
 from configparser import ConfigParser
 from copy import copy
 from fnmatch import fnmatch
-import os
-from os import environ, unlink, walk, sep, listdir, makedirs, chdir
-from os.path import join, exists, dirname, realpath, splitext, expanduser, isdir
+from os import chdir, environ, listdir, makedirs, sep, unlink, walk
+from os.path import (dirname, exists, expanduser, isdir, join, realpath,
+                     splitext)
 from pprint import pformat
-import re
 from re import search
-import select
-import sys
-from sys import stdout, stderr, exit
-from subprocess import Popen, PIPE
-from shutil import copyfile, rmtree, copytree, move
-import textwrap
+from shutil import copyfile, copytree, move, rmtree
+from subprocess import PIPE, Popen
+from sys import exit, stderr, stdout
 from urllib.request import FancyURLopener
-import warnings
 
 from buildozer.jsonstore import JsonStore
 

@@ -2,10 +2,10 @@
 iOS target, based on kivy-ios project
 '''
 
-from getpass import getpass
-from os.path import join, basename, expanduser, realpath
 import plistlib
 import sys
+from getpass import getpass
+from os.path import basename, expanduser, join, realpath
 
 from buildozer import BuildozerCommandException
 from buildozer.target import Target, no_config

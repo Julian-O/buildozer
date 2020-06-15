@@ -1,16 +1,17 @@
 import codecs
-import unittest
-import buildozer as buildozer_module
-from buildozer import Buildozer
-import re
 import os
-from six import StringIO
+import re
 import tempfile
+import unittest
 from unittest import mock
 
-from buildozer.targets.android import (
-    TargetAndroid, DEFAULT_ANDROID_NDK_VERSION, MSG_P4A_RECOMMENDED_NDK_ERROR
-)
+from six import StringIO
+
+import buildozer as buildozer_module
+from buildozer import Buildozer
+from buildozer.targets.android import (DEFAULT_ANDROID_NDK_VERSION,
+                                       MSG_P4A_RECOMMENDED_NDK_ERROR,
+                                       TargetAndroid)
 
 
 class TestBuildozer(unittest.TestCase):

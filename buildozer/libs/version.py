@@ -17,7 +17,6 @@ import re
 
 from ._structures import Infinity
 
-
 __all__ = [
     "parse", "Version", "LegacyVersion", "InvalidVersion", "VERSION_PATTERN"
 ]
